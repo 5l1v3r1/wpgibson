@@ -109,7 +109,7 @@ class WP_Object_Cache
 
 	function WP_Object_Cache() {
 		$this->gb = new Gibson();
-		$this->gb->connect( '/var/run/gibson.sock' );
+        $this->gb->pconnect( '/var/run/gibson.sock' );
 		
 		global $blog_id, $table_prefix;
 		$this->global_prefix = '';
